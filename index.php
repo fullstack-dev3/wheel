@@ -72,6 +72,9 @@
                     products.push(product);
                 }
             });
+
+            if (products.length == 1)
+                initProduct();
         });
 
         $('#nextBtn').click(function() {
@@ -85,7 +88,9 @@
 
         startSpin("init");
 
-        $('#product h4').text('Current Prize : ' + products[0][0]);
+        function initProduct() {
+            $('#product h4').text('Current Prize : ' + products[0][0]);
+        }
 
         let audio = new Audio('tick.mp3');
 
