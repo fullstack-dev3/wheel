@@ -58,7 +58,10 @@
 
                     product.push(record.get('Prize Number'));
                     product.push(record.get('Product Name'));
-                    product.push(record.get('Product Image'));
+
+                    var proImage = record.get('Product Image')
+                    product.push(proImage[0]['url']);
+
                     product.push(record.get('Product Bullets'));
                     product.push(record.get('Price'));
 
