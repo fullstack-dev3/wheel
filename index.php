@@ -51,6 +51,7 @@
             sort: [ {field: 'Prize Number', direction: 'asc'} ]
         }).eachPage(function page(records, fetchNextPage) {
             records.forEach(function(record) {
+                console.log(record);
                 var giveNum = record.get('Giveaway Number');
 
                 if (giveNum == '') {
@@ -118,8 +119,6 @@
             var rand = Math.floor(Math.random() * num.length);
 
             $('#prize').text(num[rand]);
-
-            console.log(products);
         }
     </script>
 </html>
