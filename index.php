@@ -61,12 +61,12 @@
                     product.push(record.get('Product Image'));
                     product.push(record.get('Product Bullets'));
                     product.push(record.get('Price'));
-console.log(product);
+
                     products.push(product);
                 }
             });
         });
-
+console.log(products);
         startSpin("init");
 
         let audio = new Audio('tick.mp3');
