@@ -54,7 +54,7 @@
                 var giveNum = record.get('Giveaway Number');
                 console.log(giveNum);
 
-                if (giveNum == '') {
+                if (giveNum == null) {
                     var product = [];
 
                     product.push(record.get('Prize Number'));
