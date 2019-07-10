@@ -52,7 +52,6 @@
         }).eachPage(function page(records, fetchNextPage) {
             records.forEach(function(record) {
                 var giveNum = record.get('Giveaway Number');
-                console.log(giveNum);
 
                 if (giveNum == null) {
                     var product = [];
@@ -62,7 +61,7 @@
                     product.push(record.get('Product Image'));
                     product.push(record.get('Product Bullets'));
                     product.push(record.get('Price'));
-
+console.log(product);
                     products.push(product);
                 }
             });
