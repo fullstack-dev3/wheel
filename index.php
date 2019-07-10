@@ -67,8 +67,6 @@
             });
         });
 
-        console.log(products);
-
         startSpin("init");
 
         let audio = new Audio('tick.mp3');
@@ -120,6 +118,8 @@
             var rand = Math.floor(Math.random() * num.length);
 
             $('#prize').text(num[rand]);
+
+            console.log(products);
         }
     </script>
 </html>
