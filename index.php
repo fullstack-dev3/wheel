@@ -74,7 +74,7 @@
             });
 
             $('#product h4').text('Current Prize : ' + products[currentPro][0]);
-            $('#nextBtn').show();
+            $('#nextBtn').removeClass('d-none');
 
             fetchNextPage();
         });
