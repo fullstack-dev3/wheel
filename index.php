@@ -18,6 +18,9 @@
 
         </div>
         <div id="prize"></div>
+        <div class="container text-center">
+            
+        </div>
     </body>
 
     <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
@@ -32,11 +35,10 @@
         var base = new Airtable({ apiKey: 'keyUClRNN9po9WMti' }).base('appXfXlSlxIovOjTW');
 
         var num = [];
+        var products = [];
 
         base('user').select({
-            sort: [
-                {field: 'Name', direction: 'asc'}
-            ]
+            sort: [ {field: 'Name', direction: 'asc'} ]
         }).eachPage(function page(records, fetchNextPage) {
             records.forEach(function(record) {
                 num.push(record.get('Giveaway Number'));
@@ -44,6 +46,28 @@
 
             fetchNextPage();
         });
+
+        base('Admin').select({
+            sort: [ {field: 'Prize Number', direction: 'asc'} ]
+        }).eachPage(function page(records, fetchNextPage) {
+            records.forEach(function(record) {
+                var giveNum = record.get('Giveaway Number');
+
+                if (giveNum == '') {
+                    var product = [];
+
+                    product.push(record.get('Prize Number'));
+                    product.push(record.get('Product Name'));
+                    product.push(record.get('Product Image'));
+                    product.push(record.get('Product Bullets'));
+                    product.push(record.get('Price'));
+
+                    products.push(product);
+                }
+            });
+        });
+
+        console.log(products);
 
         startSpin("init");
 
