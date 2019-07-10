@@ -18,8 +18,10 @@
 
         </div>
         <div id="prize"></div>
-        <div class="container text-center">
-            
+        <div class="container text-center" id="product">
+            <h4></h4>
+
+            <button type="button" class="btn btn-danger btn-lg text-white" id="nextBtn">Next Prize</button>
         </div>
     </body>
 
@@ -36,6 +38,8 @@
 
         var num = [];
         var products = [];
+
+        var currentPro = 0;
 
         base('user').select({
             sort: [ {field: 'Name', direction: 'asc'} ]
@@ -69,8 +73,19 @@
                 }
             });
         });
-console.log(products);
+
+        $('#nextBtn').click(function() {
+            currentPro++;
+
+            if (currentPro < products.length)
+                $('#product h4').text('Current Prize : ' + products[currentPro][0]);
+            else
+                $(this).hide();
+        });
+
         startSpin("init");
+
+        $('#product h4').text('Current Prize : ' + products[0][0]);
 
         let audio = new Audio('tick.mp3');
 
