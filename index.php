@@ -18,8 +18,17 @@
 
         </div>
         <div id="prize"></div>
-        <div class="container text-center" id="product">
+        <div class="container" id="product">
             <h4></h4>
+
+            <div class="row">
+                <div class="col-6">
+                    <img src="" />
+                </div>
+                <div class="col-6">
+                    <span></span>
+                </div>
+            </div>
 
             <button type="button" class="btn btn-danger btn-lg text-white d-none" id="nextBtn">Next Prize</button>
         </div>
@@ -73,8 +82,7 @@
                 }
             });
 
-            $('#product h4').text('Current Prize : ' + products[currentPro][0]);
-            $('#nextBtn').removeClass('d-none');
+            getProduct(0);
 
             fetchNextPage();
         });
@@ -82,11 +90,19 @@
         $('#nextBtn').click(function() {
             currentPro++;
 
-            if (currentPro < products.length)
-                $('#product h4').text('Current Prize : ' + products[currentPro][0]);
-            else
-                $(this).hide();
+            getProduct(currentPro);
         });
+
+        function getProduct(num) {
+            if (currentPro < products.length) {
+                $('#product h4').text('Current Prize : ' + products[num][0]);
+            } else {
+                $('#nextBtn').hide();
+            }
+
+            if (num == 0)
+                $('#nextBtn').removeClass('d-none');
+        }
 
         startSpin("init");
 
