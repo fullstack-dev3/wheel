@@ -21,7 +21,7 @@
         <div class="container text-center" id="product">
             <h4></h4>
 
-            <button type="button" class="btn btn-danger btn-lg text-white" id="nextBtn">Next Prize</button>
+            <button type="button" class="btn btn-danger btn-lg text-white d-none" id="nextBtn">Next Prize</button>
         </div>
     </body>
 
@@ -74,6 +74,7 @@
             });
 
             $('#product h4').text('Current Prize : ' + products[currentPro][0]);
+            $('#nextBtn').show();
 
             fetchNextPage();
         });
