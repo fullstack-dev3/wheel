@@ -51,8 +51,8 @@
             sort: [ {field: 'Prize Number', direction: 'asc'} ]
         }).eachPage(function page(records, fetchNextPage) {
             records.forEach(function(record) {
-                console.log(record);
                 var giveNum = record.get('Giveaway Number');
+                console.log(giveNum);
 
                 if (giveNum == '') {
                     var product = [];
