@@ -94,7 +94,7 @@
         });
 
         function getProduct(num) {
-            if (currentPro < products.length) {
+            if (num < products.length) {
                 $('#product h4').text('Current Prize : ' + products[num][0]);
             } else {
                 $('#nextBtn').hide();
