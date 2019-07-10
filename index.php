@@ -72,19 +72,22 @@
                     products.push(product);
                 }
             });
+
+            $('#product h4').text('Current Prize : ' + products[currentPro][0]);
+
+            fetchNextPage();
         });
 
         $('#nextBtn').click(function() {
+            currentPro++;
+
             if (currentPro < products.length)
                 $('#product h4').text('Current Prize : ' + products[currentPro][0]);
             else
                 $(this).hide();
-
-            currentPro++;
         });
 
         startSpin("init");
-        $('#nextBtn').click();
 
         let audio = new Audio('tick.mp3');
 
