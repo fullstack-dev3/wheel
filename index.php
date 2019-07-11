@@ -25,9 +25,9 @@
                 <div class="col-lg-6 col-md-6 col-sm-6">
 
                 </div>
+
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <h4 class="pname"></h4>
-                    <br />
                     <ul></ul>
                     <h4 class="value"></h4>
                 </div>
