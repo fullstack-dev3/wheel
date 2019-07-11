@@ -28,7 +28,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <h4 class="pname"></h4>
                     <br />
-                    <p></p>
+                    <ul></ul>
                     <h4 class="value"></h4>
                 </div>
 
@@ -104,8 +104,17 @@
                 var txt = '<img src="' + products[num][2] + '" />';
                 $('#product .row>div:first-child').append(txt);
 
-                $('#product p').text(products[num][3]);
-console.log(products[num][3].split(/\r?\n/));
+                var prop = products[num][3].split(/\r?\n/);
+                var txt = '';
+
+                for (var i = 0; i < prop.length; i++) {
+                    if (prop[i] != '')
+                        txt += '<li>' + prop[i] + '</li>';
+                }
+
+                $('#product ul').append(txt);
+
+
                 $('#product .value').text('Value : $' + products[num][4]);
             }
 

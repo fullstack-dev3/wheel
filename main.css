@@ -38,8 +38,8 @@ body
 #product .prize {
     margin: 50px 0;
 }
-#product p {
-    font-size: 24px;
+#product ul li {
+    font-size: 20px;
     font-weight: 500;
 }
 #product img {
