@@ -104,7 +104,7 @@
 
                 $('#product p').text(products[num][3]);
 
-                $('#product .value').text('Value : ' . products[num][4]);
+                $('#product .value').text('Value : ' + products[num][4]);
             }
 
             if (num == products.length - 1)
