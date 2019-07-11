@@ -88,7 +88,10 @@
                 }
             });
 
-            getProduct(0);
+            if (products.length == 0)
+                $('.container').hide();
+            else
+                getProduct(0);
 
             fetchNextPage();
         });
