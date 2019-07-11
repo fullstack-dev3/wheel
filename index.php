@@ -94,6 +94,10 @@
         });
 
         $('#nextBtn').click(function() {
+            $('#prize').text('');
+
+            $('.power_controls a').show();
+
             currentPro++;
 
             getProduct(currentPro);
@@ -101,8 +105,6 @@
 
         function getProduct(num) {
             if (num < products.length) {
-                $('.power_controls a').show();
-
                 currentID = products[num][0];
 
                 $('#product .prize').text('Current Prize : ' + products[num][1]);
@@ -148,8 +150,6 @@
 
         function startSpin(val)
         {
-            $('#prize').text('');
-
             let theWheel = new Winwheel({
                 'numSegments'       : 9,
                 'outerRadius'       : 200,
