@@ -71,7 +71,7 @@
 
                 if (giveNum == null) {
                     var product = [];
-
+console.log(record.get('id'));
                     product.push(record.get('Prize Number'));
                     product.push(record.get('Product Name'));
 
@@ -176,7 +176,7 @@
         function alertPrize(indicatedSegment)
         {
             alert(currentPro);
-            
+
             $('.power_controls a').hide();
 
             var rand = Math.floor(Math.random() * num.length);
