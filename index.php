@@ -19,14 +19,16 @@
         </div>
         <div id="prize"></div>
         <div class="container" id="product">
-            <h4></h4>
+            <h4 class="prize"></h4>
+            <h4 class="pname"></h4>
 
             <div class="row">
                 <div class="col-6">
                     <img src="" />
                 </div>
                 <div class="col-6">
-                    <span></span>
+                    <p></p>
+                    <h4 class="value"></h4>
                 </div>
             </div>
 
@@ -95,10 +97,18 @@
 
         function getProduct(num) {
             if (num < products.length) {
-                $('#product h4').text('Current Prize : ' + products[num][0]);
-            } else {
-                $('#nextBtn').hide();
+                $('#product .prize').text('Current Prize : ' + products[num][0]);
+                $('#product .pname').text('Current Prize : ' + products[num][1]);
+
+                $('#product img').attr('src', products[num][2]);
+
+                $('#product p').text(products[num][3]);
+
+                $('#product .value').text('Value : ' . products[num][4]);
             }
+
+            if (num == products.length - 1)
+                $('#nextBtn').hide();
 
             if (num == 0)
                 $('#nextBtn').removeClass('d-none');
