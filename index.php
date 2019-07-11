@@ -52,6 +52,7 @@
         var products = [];
 
         var currentPro = 0;
+        var currentID = '';
 
         base('user').select({
             sort: [ {field: 'Name', direction: 'asc'} ]
@@ -71,7 +72,9 @@
 
                 if (giveNum == null) {
                     var product = [];
-console.log(record.getId());
+                    
+                    product.push(record.getId());
+
                     product.push(record.get('Prize Number'));
                     product.push(record.get('Product Name'));
 
@@ -98,14 +101,16 @@ console.log(record.getId());
 
         function getProduct(num) {
             if (num < products.length) {
-                $('#product .prize').text('Current Prize : ' + products[num][0]);
-                $('#product .pname').text(products[num][1]);
+                currentID = products[num][0];
 
-                var txt = '<img src="' + products[num][2] + '" />';
+                $('#product .prize').text('Current Prize : ' + products[num][1]);
+                $('#product .pname').text(products[num][2]);
+
+                var txt = '<img src="' + products[num][3] + '" />';
                 $('#product .row>div:first-child').empty();
                 $('#product .row>div:first-child').append(txt);
 
-                var prop = products[num][3].split(/\r?\n/);
+                var prop = products[num][4].split(/\r?\n/);
                 var txt = '';
 
                 for (var i = 0; i < prop.length; i++) {
@@ -117,7 +122,7 @@ console.log(record.getId());
                 $('#product ul').append(txt);
 
 
-                $('#product .value').text('Value : $' + products[num][4]);
+                $('#product .value').text('Value : $' + products[num][5]);
             }
 
             if (num == products.length - 1)
@@ -175,7 +180,7 @@ console.log(record.getId());
 
         function alertPrize(indicatedSegment)
         {
-            alert(currentPro);
+            alert(currentID);
 
             $('.power_controls a').hide();
 
