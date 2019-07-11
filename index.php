@@ -23,10 +23,10 @@
             <h4 class="pname"></h4>
 
             <div class="row">
-                <div class="col-6">
+                <div class="col-lg-6">
                     <img src="" />
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6">
                     <p></p>
                     <h4 class="value"></h4>
                 </div>
