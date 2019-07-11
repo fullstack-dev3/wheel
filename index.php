@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     </head>
     <body>
-        <div class="container text-center">
+        <div class="container text-center d-none">
             <div class="the_wheel">
                 <canvas id="canvas" width="420" height="420">
                     <p style="{color: white}" align="center">Sorry, your browser doesn't support canvas. Please try another.</p>
@@ -88,10 +88,11 @@
                 }
             });
 
-            if (products.length == 0)
-                $('.container').hide();
-            else
+            if (products.length > 0) {
+                $('.container').removeClass('d-none');
+                
                 getProduct(0);
+            }
 
             fetchNextPage();
         });
