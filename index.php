@@ -175,9 +175,15 @@
 
         function alertPrize(indicatedSegment)
         {
+            alert(currentPro);
+            
+            $('.power_controls a').hide();
+
             var rand = Math.floor(Math.random() * num.length);
 
-            $('#prize').text(num[rand]);
+            var getNum = num[rand];
+
+            $('#prize').text(getNum);
         }
     </script>
 </html>
