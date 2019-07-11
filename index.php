@@ -180,8 +180,6 @@
 
         function alertPrize(indicatedSegment)
         {
-            alert(currentID);
-
             $('.power_controls a').hide();
 
             var rand = Math.floor(Math.random() * num.length);
@@ -189,6 +187,10 @@
             var getNum = num[rand];
 
             $('#prize').text(getNum);
+
+            base('Admin').update(currentID, {
+                "Giveaway Number" : getNum
+            });
         }
     </script>
 </html>
