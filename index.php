@@ -184,7 +184,7 @@
 
             var rand = Math.floor(Math.random() * num.length);
 
-            var getNum = string(num[rand]);
+            var getNum = String(num[rand]);
 
             $('#prize').text(getNum);
 
