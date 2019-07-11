@@ -101,6 +101,8 @@
 
         function getProduct(num) {
             if (num < products.length) {
+                $('.power_controls a').show();
+
                 currentID = products[num][0];
 
                 $('#product .prize').text('Current Prize : ' + products[num][1]);
