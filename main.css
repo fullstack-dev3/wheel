@@ -38,9 +38,18 @@ body
 #product .prize {
     margin: 50px 0;
 }
+#product ul {
+    list-style-type: none;
+    margin: 0;
+}
 #product ul li {
     font-size: 20px;
     font-weight: 500;
+    text-indent: -5px;
+}
+#product ul li:before {
+    content: "-";
+    text-indent: -5px;
 }
 #product img {
     width: 100%;
