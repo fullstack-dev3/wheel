@@ -19,14 +19,14 @@
         </div>
         <div id="prize"></div>
         <div class="container" id="product">
-            <h4 class="prize"></h4>
-            <h4 class="pname"></h4>
+            <h4 class="prize text-center"></h4>
 
             <div class="row">
                 <div class="col-lg-6">
                     <img src="" />
                 </div>
                 <div class="col-lg-6">
+                    <h4 class="pname"></h4>
                     <p></p>
                     <h4 class="value"></h4>
                 </div>

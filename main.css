@@ -35,3 +35,10 @@ body
     top: 290px;
     width: 100%;
 }
+#product p {
+    font-size: 28px;
+    font-weight: 500;
+}
+#product img {
+    width: 100%;
+}
