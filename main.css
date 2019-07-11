@@ -35,8 +35,11 @@ body
     top: 290px;
     width: 100%;
 }
+#product {
+    margin-top: 50px
+}
 #product p {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
 }
 #product img {
