@@ -22,10 +22,10 @@
             <h3 class="prize text-center"></h3>
 
             <div class="row">
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-6 col-md-6 col-sm-6">
                     <img src="" />
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-6 col-md-6 col-sm-6">
                     <h4 class="pname"></h4>
                     <br />
                     <p></p>
