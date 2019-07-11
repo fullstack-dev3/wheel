@@ -102,6 +102,7 @@
                 $('#product .pname').text(products[num][1]);
 
                 var txt = '<img src="' + products[num][2] + '" />';
+                $('#product .row>div:first-child').empty();
                 $('#product .row>div:first-child').append(txt);
 
                 var prop = products[num][3].split(/\r?\n/);
@@ -112,6 +113,7 @@
                         txt += '<li>' + prop[i] + '</li>';
                 }
 
+                $('#product ul').empty();
                 $('#product ul').append(txt);
 
 
