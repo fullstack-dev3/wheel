@@ -23,7 +23,7 @@
 
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
-                    <img src="" />
+
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <h4 class="pname"></h4>
@@ -31,9 +31,9 @@
                     <p></p>
                     <h4 class="value"></h4>
                 </div>
-            </div>
 
-            <button type="button" class="btn btn-danger btn-lg text-white d-none" id="nextBtn">Next Prize</button>
+                <button type="button" class="btn btn-danger btn-lg text-white d-none" id="nextBtn">Next Prize</button>
+            </div>
         </div>
     </body>
 
@@ -101,7 +101,8 @@
                 $('#product .prize').text('Current Prize : ' + products[num][0]);
                 $('#product .pname').text(products[num][1]);
 
-                $('#product img').attr('src', products[num][2]);
+                var txt = '<img src="' + products[num][2] + '" />';
+                $('#product .row>div:first-child').append(txt);
 
                 $('#product p').text(products[num][3]);
 

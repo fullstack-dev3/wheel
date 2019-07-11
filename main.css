@@ -45,3 +45,6 @@ body
 #product img {
     width: 100%;
 }
+#product button {
+    margin: 0 auto;
+}
