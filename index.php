@@ -105,8 +105,8 @@
                 $('#product .row>div:first-child').append(txt);
 
                 $('#product p').text(products[num][3]);
-console.log(products[num][3].split("\n"));
-                $('#product .value').text('Value : ' + products[num][4]);
+console.log(products[num][3].split(/\r?\n/));
+                $('#product .value').text('Value : $' + products[num][4]);
             }
 
             if (num == products.length - 1)
