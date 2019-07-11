@@ -71,7 +71,7 @@
 
                 if (giveNum == null) {
                     var product = [];
-console.log(record.get('id'));
+console.log(record);
                     product.push(record.get('Prize Number'));
                     product.push(record.get('Product Name'));
 
