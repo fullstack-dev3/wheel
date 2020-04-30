@@ -1,56 +1,22 @@
-# WP-LearnDash-filters
+# WP-LearnDash-migrate
 
-This repo introduces 3 custom filters for Wordpress LearnDash.
+This repo is Wordpress plugin for LearnDash Migrate developed by VibeThemes.
 
-## Introduction
+WPLMS Learndash Migrate helps users to migrate all Learndash courses to WPLMS courses.
 
-* learndash_template
-> Developers can use this hook to design custom template for Course List.
-> Returns the template body.
+WPLMS Learndash Migrate plugin is a free plugin developed to help users to migrate all of their Learndash courses to WPLMS courses. The users do not have to worry a lot and perform various steps to migrate their courses. All this is done by a simple click. With the courses all of the quizzes and the units will be migrated successfully with just one click.
 
-```bash
-add_filter( 'learndash_template', 'yourfunction_learndash_course_grid_course_list', 99, 5 );
-function yourfunction_learndash_course_grid_course_list( $filepath, $name, $args, $echo, $return_file_path ) {
+## Installation
 
-	if ( 'course_list_template' === $name ) {
-		return get_template_directory() . '/yourname_course_list_template.php';
-	}
-	return $filepath;
-}
-```
+* From your WordPress dashboard
+1. Visit 'Plugins > Add New'
+2. Search for 'WPLMS Learndash Migrate'
+3. Activate WPLMS Learndash Migrate from your Plugins page. 
 
-* learndash_previous_post_link
-> Developers can use this hook to get the previous post link.
-> Returns the link element.
 
-```bash
-add_filter('learndash_previous_post_link', function( $link ) {
+* From WordPress.org
+1. Download WPLMS Learndash Migrate.
+2. Upload the 'wplms_learndash_migrate' directory to your '/wp-content/plugins/' directory, using your favorite method (ftp, sftp, scp, etc...)
+3. Activate WPLMS Learndash Migrate from your Plugins page.
 
-	add_filter( 'learndash_previous_post_link', function( $link, $permalink, $link_name, $post ) {
-		return '<a href="'. $permalink .'" class="prev-link" rel="prev">< ' . _x( 'Previous', 'lesson navigation', ’yourdomain’ ) . '</a>';
-	}, 10, 4);
-
-}, 5, 1);
-```
-
-* comment_text
-> Developers can use this hook to override the result text after quiz is completed.
-> Returns the text to override in comment.
-
-```bash
-add_filter( 'comment_text', function( $resultText ) {
-
-	$json_anim = esc_url( get_post_meta( get_the_ID(), 'json_animation', 1 ) );
-
-	if ( ! empty( $json_anim ) ) {
-		$resultTextfinal[] = '<div class="results-animated" data-path="' . $json_anim .'"></div>';
-
-		$resultTextfinal[]= $resultText;
-
-		$resultText = join( '',$resultTextfinal );
-	}
-
-	return $resultText;
-
-}, 5, 1);
-```
+For more details, please visit [VibeThemes](https://vibethemes.com/">VibeThemes)
