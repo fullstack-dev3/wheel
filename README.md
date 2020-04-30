@@ -1,81 +1,24 @@
-# Angular 9 Example Lazy loading
+# WP-iMember360-Post
 
-> An Angular starter kit featuring [Angular 9.1.3](https://angular.io), [Angular CLI 9.1.3](https://cli.angular.io/)
+This repo introduces the hooks to insert/update posts in iMember360 Wordpress plugin.
 
-> it's part of a repo series designed to create a Progressive Web App with Angular
-
-* [Step 1 : Example Starter](https://github.com/ganatan/angular-example-starter)
-* [Step 2 : Example Routing](https://github.com/ganatan/angular-example-routing)
-* [Step 3 : Example Lazy-loading](https://github.com/ganatan/angular-example-lazy-loading)
-* [Step 4 : Example Bootstrap](https://github.com/ganatan/angular-example-bootstrap)
-* [Step 5 : Example Modules](https://github.com/ganatan/angular-modules)
-* [Step 6 : Example Server Side Rendering](https://github.com/ganatan/angular-example-ssr)
-* [Step 7 : Example HTTP Client](https://github.com/ganatan/angular-example-httpclient)
-* [Step 8 : Example Transfer State](https://github.com/ganatan/angular-example-transferstate)
-* [Step 9 : Example PWA](https://github.com/ganatan/angular-example-pwa)
-* [Step 10 : Example SEO](https://github.com/ganatan/angular-example-seo)
-* [Step 11 : Angular 9 Application](https://github.com/ganatan/angular9-app)
-
-# Web Application Live Demo
-[https://angular.ganatan.com](https://angular.ganatan.com)
-
-## Quick start
-
-```bash
-# clone the repo
-git clone https://github.com/ganatan/angular-example-lazy-loading.git
-
-# change directory
-cd angular-example-lazy-loading
-
-# install the repo with npm
-npm install
-
-# start the server
-npm start
-
-```
-in your browser go to [http://localhost:4200](http://localhost:4200) 
-
-### Prerequisites
-What you need to run this app:
-* Angular version 9.1.3
-* Angular CLI version 9.1.3
-* Typescript version 3.8.3
-* Node.js version 12.16.2 LTS (Long Term Support)
-* npm (node package manager) version 6.14.4
+## i4w_insert_post
 
 
+### Usage:
+This hook enables you to safely run your code after a page/post has been inserted.
 
-## Getting Started
+
+### Parameters:
+iMember360 will pass the following parameters to your action function:
+
+#### $post_id
+is the post ID of the page/post being updated
+#### $post
+is the content of the entire $post” object
+#### $update
+determines if the action is an “insert” (false) or an “update” (true)
 
 
-### Installation
-* `npm install` (installing dependencies)
-* `npm outdated` (verifying dependencies)
-
-### Developpement
-* `npm run start`
-* in your browser [http://localhost:4200](http://localhost:4200) 
-
-### Production 
-* `npm run build`
-
-### Tests
-* `npm run lint`
-* `npm run test`
-* `npm run e2e`
-
-### Author
-* Updated : 27/04/2020
-* Author  : danny
-
-### Documentation
-
-English Tutorials
-- Installation - https://www.ganatan.com/tutorials/lazy-loading-with-angular
-- Tutorials Step by Step - https://www.ganatan.com/tutorials/en
-
-Tutoriels en français
-- Installation - https://www.ganatan.com/tutorials/lazy-loading-avec-angular
-- Tutoriels Etape par étape - https://www.ganatan.com/tutorials
+### Example:
+* This URL: [i4w_insert_post.php](https://github.com/eujinong/WP-iMember360-Post/blob/master/i4w_insert_post.php)
