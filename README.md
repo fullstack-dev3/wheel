@@ -19,4 +19,9 @@ WPLMS Learndash Migrate plugin is a free plugin developed to help users to migra
 2. Upload the 'wplms_learndash_migrate' directory to your '/wp-content/plugins/' directory, using your favorite method (ftp, sftp, scp, etc...)
 3. Activate WPLMS Learndash Migrate from your Plugins page.
 
-For more details, please visit [VibeThemes](https://vibethemes.com/">VibeThemes)
+For more details, please visit [VibeThemes](https://vibethemes.com)
+
+## Description
+
+How to setup and get started?
+[Here](https://vibethemes.com/documentation/wplms/knowledge-base/migrate-from-learndash-to-wplms) is the tutorial for this plugin.
